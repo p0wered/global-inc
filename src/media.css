@@ -2,6 +2,11 @@
     .container{
         width: 1140px;
     }
+    .info-item{
+        min-height: 18rem;
+        min-width: 16rem;
+        padding: 4rem 3rem ;
+    }
 }
 
 @media screen and (max-width: 1200px) {
@@ -10,6 +15,17 @@
     }
     h2{
         font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .info{
+        flex-direction: column;
+    }
+    .info-item{
+        min-width: 28rem;
+        min-height: 18rem;
+        padding: 4rem 3rem;
     }
 }
 
@@ -41,5 +57,8 @@
 @media screen and (max-width: 720px) {
     .container{
         width: 100%;
+    }
+    .section-2{
+        padding: .3rem;
     }
 }
