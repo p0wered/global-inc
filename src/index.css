@@ -139,3 +139,63 @@ a, a:visited, a:hover, a:active {
   padding: 2rem;
   gap: 1rem;
 }
+
+.form__group {
+  width: 100%;
+  position: relative;
+  padding: 15px 6px 0;
+  margin-top: 10px;
+}
+
+.form__field {
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #f5f1ed;
+  outline: 0;
+  font-size: 2rem;
+  color: #f5f1ed;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.3s;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .form__label {
+    font-size: 2rem;
+    cursor: text;
+    top: 20px;
+  }
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.3s;
+  font-size: 1.2rem;
+  color: #f5f1ed;
+}
+
+.form__field:focus {
+  ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  padding-bottom: 6px;
+  transition: .3s;
+}
+
+.form__field{
+  &:required,&:invalid { box-shadow:none; }
+}
+
+.field-merger{
+  display: flex;
+  gap: 2rem;
+}

@@ -27,6 +27,9 @@
         min-height: 18rem;
         padding: 4rem 3rem;
     }
+    .field-merger{
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width: 992px) {
