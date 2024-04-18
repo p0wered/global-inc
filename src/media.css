@@ -23,7 +23,7 @@
         flex-direction: column;
     }
     .info-item{
-        min-width: 28rem;
+        width: 28rem;
         min-height: 18rem;
         padding: 4rem 3rem;
     }
@@ -38,27 +38,31 @@
         font-size: 42px;
     }
     h2{
-        font-size: 30px;
-    }
-    h3{
-        font-size: 24px;
-    }
-    h4{
-        font-size: 18px;
-    }
-    p{
-        font-size: 16px;
+        font-size: 36px;
     }
     .title-flexbox{
         padding: 1.325rem;
     }
+        .title-flexbox h3{
+            font-size: 26px;
+        }
 }
 
 @media screen and (max-width: 720px) {
     .container{
         width: 100%;
     }
-    .section-2{
-        padding: .3rem;
+    .stats-section{
+        padding: 1rem 0;
+    }
+    .info-item{
+        width: 100%;
+    }
+    .stats-title{
+        padding-bottom: 2rem;
+    }
+    .title-flexbox{
+        align-items: flex-start;
+        gap: 0;
     }
 }

@@ -15,8 +15,16 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  color: #1B1A1A;
-  background-color: #fcfffc;
+  color: #222;
+  background-color: #f5f1ed;
+}
+
+::-moz-selection { /* Code for Firefox */
+  background: rgba(94, 73, 56, 0.58);
+}
+
+::selection {
+  background: rgba(94, 73, 56, 0.58);
 }
 
 p, h1, h2, h3, h4 {
@@ -49,16 +57,6 @@ a, a:visited, a:hover, a:active {
   text-decoration: none;
 }
 
-::selection {
-  background: black;
-  color: white;
-}
-
-::-moz-selection {
-  background: black;
-  color: white;
-}
-
 .container{
   width: 1320px;
   margin: auto;
@@ -66,32 +64,42 @@ a, a:visited, a:hover, a:active {
 }
 
 .title-section{
-  color: #fcfffc;
+  overflow-x: hidden;
+  color: #222;
   height: 75vh;
-  background-size: cover;
-  background-position: center;
+  background-color: #E6E0E0;
 }
 
   .title-flexbox{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
     padding: 4rem;
-    gap: 10px;
+    gap: 0.5rem;
   }
     .title-flexbox h1{
       font-weight: 800;
     }
-    .title-flexbox h4{
-      font-weight: 300;
+    .title-flexbox h3{
+      font-weight: 400;
+    }
+    .main-btn{
+      padding: 1.5rem 4rem;
+      background-color: #E85A4F;
+      border-radius: 15px;
+      margin-top: 1rem;
     }
 
 .stats-section{
   padding: 2rem;
   text-align: center;
 }
+  .stats-title{
+    padding-bottom: 3rem;
+  }
 
   .info{
     display: flex;
@@ -101,7 +109,6 @@ a, a:visited, a:hover, a:active {
   }
 
     .info-item{
-      background-color: #cfd4f7;
       padding: 6rem 3rem;
       border-radius: 15px;
       display: flex;
@@ -110,8 +117,25 @@ a, a:visited, a:hover, a:active {
       min-height: 22rem;
       min-width: 19rem;
       gap: 1rem;
+      border: 2px solid #1B1A1A;
+      transition: .3s;
+    }
+
+    .info-item:hover{
+      transform: scale(104%);
+      cursor: default;
     }
 
     .info-item i{
       font-size: 2rem;
     }
+
+.contact-box{
+  background-color: #222;
+  color: #f5f1ed;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  padding: 2rem;
+  gap: 1rem;
+}
