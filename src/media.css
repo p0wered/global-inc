@@ -30,12 +30,14 @@
     .field-merger{
         flex-direction: column;
     }
+    .title-flexbox h1{
+        font-size: calc(65px + 4vw);
+    }
 }
 
 @media screen and (max-width: 992px) {
     .container{
         width: 720px;
-        padding: 1rem;
     }
     h1{
         font-size: 42px;
@@ -49,6 +51,34 @@
         .title-flexbox h3{
             font-size: 26px;
         }
+    .contact-section{
+        padding: 1rem;
+    }
+    .contact-buttons{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .contact-inner{
+        margin-bottom: -1rem;
+    }
+    .contact-inner h2{
+        padding: 0;
+    }
+    .submit-btn{
+        width: 100%;
+    }
+    .contact-flexbox{
+        gap: 0;
+        flex-direction: column;
+    }
+    .contact-info{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 0;
+    }
+    .fields{
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 720px) {

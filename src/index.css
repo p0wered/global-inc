@@ -20,11 +20,11 @@ body {
 }
 
 ::-moz-selection { /* Code for Firefox */
-  background: rgba(94, 73, 56, 0.58);
+  background: rgba(94, 73, 56, 0.35);
 }
 
 ::selection {
-  background: rgba(94, 73, 56, 0.58);
+  background: rgba(94, 73, 56, 0.35);
 }
 
 p, h1, h2, h3, h4 {
@@ -60,7 +60,18 @@ a, a:visited, a:hover, a:active {
 .container{
   width: 1320px;
   margin: auto;
-  padding: 2rem;
+  padding: 3rem 2rem;
+}
+
+.flexbox-center{
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes title-fade-in {
+  0% {
+
+  }
 }
 
 .title-section{
@@ -68,6 +79,9 @@ a, a:visited, a:hover, a:active {
   color: #222;
   height: 75vh;
   background-color: #E6E0E0;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
 }
 
   .title-flexbox{
@@ -82,6 +96,8 @@ a, a:visited, a:hover, a:active {
   }
     .title-flexbox h1{
       font-weight: 800;
+      font-size: calc(80px + 8vw);
+      line-height: 1;
     }
     .title-flexbox h3{
       font-weight: 400;
@@ -90,15 +106,22 @@ a, a:visited, a:hover, a:active {
       padding: 1.5rem 4rem;
       background-color: #E85A4F;
       border-radius: 15px;
+      border: none;
       margin-top: 1rem;
+      transition: .7s !important;
+    }
+    .main-btn:hover{
+      background-color: #c4453b;
     }
 
 .stats-section{
-  padding: 2rem;
   text-align: center;
+  overflow: hidden;
+  background-color: #e9e1e1;
+  border-bottom: 2px solid #1B1A1A;
 }
   .stats-title{
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
   }
 
   .info{
@@ -119,6 +142,7 @@ a, a:visited, a:hover, a:active {
       gap: 1rem;
       border: 2px solid #1B1A1A;
       transition: .3s;
+      background-color: #f5f1ed;
     }
 
     .info-item:hover{
@@ -130,72 +154,180 @@ a, a:visited, a:hover, a:active {
       font-size: 2rem;
     }
 
-.contact-box{
-  background-color: #222;
-  color: #f5f1ed;
-  display: flex;
-  flex-direction: column;
-  border-radius: 15px;
-  padding: 2rem;
-  gap: 1rem;
+.about-section{
+  background-color: #f5f1ed;
+  border-bottom: 2px solid #1B1A1A;
+  overflow: hidden;
 }
 
-.form__group {
-  width: 100%;
-  position: relative;
-  padding: 15px 6px 0;
-  margin-top: 10px;
+.contact-section{
+  overflow: hidden;
+  padding: 3rem 2rem;
+  background-color: #e6e0e0;
 }
 
-.form__field {
-  width: 100%;
-  border: 0;
-  border-bottom: 2px solid #f5f1ed;
-  outline: 0;
-  font-size: 2rem;
-  color: #f5f1ed;
-  padding: 7px 0;
-  background: transparent;
-  transition: border-color 0.3s;
-
-  &::placeholder {
-    color: transparent;
+  .contact-box{
+    max-width: 60rem;
+    background-color: #222;
+    color: #f5f1ed;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    padding: 2rem;
+    gap: 1rem;
   }
 
-  &:placeholder-shown ~ .form__label {
-    font-size: 2rem;
-    cursor: text;
-    top: 20px;
-  }
-}
+    .contact-flexbox{
+      display: flex;
+      justify-content: space-between;
+      gap: 3rem;
+    }
 
-.form__label {
-  position: absolute;
-  top: 0;
-  display: block;
-  transition: 0.3s;
-  font-size: 1.2rem;
-  color: #f5f1ed;
-}
+      .contact-inner{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
 
-.form__field:focus {
-  ~ .form__label {
-    position: absolute;
-    top: 0;
-    display: block;
-    transition: 0.2s;
-    font-weight: 700;
-    font-size: 1.2rem;
-  }
-  padding-bottom: 6px;
-  transition: .3s;
-}
+      .contact-inner h2{
+        padding: 1.6rem;
+      }
 
-.form__field{
-  &:required,&:invalid { box-shadow:none; }
-}
+      .contact-info{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
 
-.field-merger{
-  display: flex;
-  gap: 2rem;
+      .submit-btn{
+        width: fit-content;
+        padding: 1.3rem 5rem;
+        background-color: #E85A4F;
+        border-radius: 10px;
+        border: none;
+        transition: .3s;
+        font-size: 18px;
+      }
+
+      .submit-btn:hover{
+        background-color: #c4453b;
+      }
+
+      .contact-buttons{
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .fields{
+        width: 36rem;
+      }
+
+      .form__group {
+        width: 100%;
+        position: relative;
+        padding: 15px 6px 0;
+        margin-top: 10px;
+      }
+
+      .form__field {
+        width: 100%;
+        border: 0;
+        border-bottom: 2px solid #f5f1ed;
+        outline: 0;
+        font-size: 2rem;
+        color: #f5f1ed;
+        padding: 7px 0;
+        background: transparent;
+        transition: border-color 0.3s;
+
+        &::placeholder {
+          color: transparent;
+        }
+
+        &:placeholder-shown ~ .form__label {
+          font-size: 1.5rem;
+          cursor: text;
+          top: 30px;
+        }
+      }
+
+      .form__label {
+        position: absolute;
+        top: 0;
+        display: block;
+        transition: 0.3s;
+        font-size: 1.2rem;
+        color: #f5f1ed;
+      }
+
+      .form__field:focus {
+        ~ .form__label {
+          position: absolute;
+          top: 0;
+          display: block;
+          transition: 0.2s;
+          font-weight: 700;
+          font-size: 1.2rem;
+        }
+        padding-bottom: 6px;
+        transition: .3s;
+      }
+
+      .form__field{
+        &:required,&:invalid { box-shadow:none; }
+      }
+
+      .checkbox.style-b {
+        display: inline-block;
+        position: relative;
+        padding-left: 30px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+      }
+      .checkbox.style-b input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+      .checkbox.style-b input:checked ~ .checkbox__checkmark:after {
+        opacity: 1;
+      }
+      .checkbox.style-b .checkbox__checkmark {
+        position: absolute;
+        top: 3px;
+        left: 0;
+        height: 22px;
+        width: 22px;
+        border: 2px solid #f5f1ed;
+        transition: background-color 0.25s ease;
+        border-radius: 4px;
+      }
+      .checkbox.style-b .checkbox__checkmark:after {
+        content: "";
+        position: absolute;
+        left: 6px;
+        top: 2px;
+        width: 5px;
+        height: 10px;
+        border: solid #e85a4f;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+        opacity: 0;
+        transition: opacity 0.25s ease;
+      }
+      .checkbox.style-b .checkbox__body {
+        line-height: 1.4;
+        font-size: 16px;
+      }
+
+footer{
+  background-color: #f5f1ed;
+  border-top: 2px solid #1B1A1A;
 }
