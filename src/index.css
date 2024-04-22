@@ -118,7 +118,7 @@ a, a:visited, a:hover, a:active {
   text-align: center;
   overflow: hidden;
   background-color: #e9e1e1;
-  border-bottom: 2px solid #1B1A1A;
+  border-top: 1px solid #00000029;
 }
   .stats-title{
     padding-bottom: 2rem;
@@ -140,9 +140,9 @@ a, a:visited, a:hover, a:active {
       min-height: 22rem;
       min-width: 19rem;
       gap: 1rem;
-      border: 2px solid #1B1A1A;
       transition: .3s;
       background-color: #f5f1ed;
+      border: 1px solid #00000029;
     }
 
     .info-item:hover{
@@ -156,14 +156,15 @@ a, a:visited, a:hover, a:active {
 
 .about-section{
   background-color: #f5f1ed;
-  border-bottom: 2px solid #1B1A1A;
   overflow: hidden;
+  border-top: 1px solid #00000029;
 }
 
 .contact-section{
   overflow: hidden;
   padding: 3rem 2rem;
   background-color: #e6e0e0;
+  border-top: 1px solid #00000029;
 }
 
   .contact-box{
@@ -180,7 +181,6 @@ a, a:visited, a:hover, a:active {
     .contact-flexbox{
       display: flex;
       justify-content: space-between;
-      gap: 3rem;
     }
 
       .contact-inner{
@@ -237,7 +237,9 @@ a, a:visited, a:hover, a:active {
         border: 0;
         border-bottom: 2px solid #f5f1ed;
         outline: 0;
-        font-size: 2rem;
+        height: 3.825rem;
+        font-size: 1.5rem;
+        font-weight: 600;
         color: #f5f1ed;
         padding: 7px 0;
         background: transparent;
@@ -248,7 +250,7 @@ a, a:visited, a:hover, a:active {
         }
 
         &:placeholder-shown ~ .form__label {
-          font-size: 1.5rem;
+          font-size: 1.2rem;
           cursor: text;
           top: 30px;
         }
@@ -259,7 +261,7 @@ a, a:visited, a:hover, a:active {
         top: 0;
         display: block;
         transition: 0.3s;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         color: #f5f1ed;
       }
 
@@ -269,8 +271,7 @@ a, a:visited, a:hover, a:active {
           top: 0;
           display: block;
           transition: 0.2s;
-          font-weight: 700;
-          font-size: 1.2rem;
+          font-size: 1rem;
         }
         padding-bottom: 6px;
         transition: .3s;
@@ -328,6 +329,6 @@ a, a:visited, a:hover, a:active {
       }
 
 footer{
+  border-top: 1px solid #00000029;
   background-color: #f5f1ed;
-  border-top: 2px solid #1B1A1A;
 }
